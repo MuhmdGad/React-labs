@@ -6,7 +6,7 @@ class Content extends Component {
   state = {
     count: 0,
     seconds: 0,
-    showSeconds:false,
+    showSeconds: false,
   };
 
   counterIncrement = () => {
@@ -52,23 +52,22 @@ class Content extends Component {
 
     const style = {
       backgroundColor: '#232323',
-      margin:'0px',
-      marginBottom:'580px',
-      height:'100%',
-      padding:'50px',
+      margin: '0px',
+      marginBottom: '580px',
+      height: '100%',
+      padding: '50px',
     };
     const secondStyle = {
-      
-      position:'absolute',
-      margin:'420px',
-      textAlign:'center',
+      position: 'absolute',
+      margin: '420px',
+      textAlign: 'center',
     };
 
     let secondsContainer = null;
 
     if (this.state.showSeconds) {
 
-      secondsContainer= (
+      secondsContainer = (
         <div className="row"  >
           <b className="col-6  text-light text-center p-lg-5" style={secondStyle}>
             <h1>
@@ -80,21 +79,16 @@ class Content extends Component {
           </b>
         </div>
       );
-
     }
-
 
     return (
       <div style={style}>
-
         <div className="row">
-
           <div className="col-12 text-light text-center p-lg-5" >
-
             <button
+              className="btn btn-light p-4 mr-5"
               disabled={this.state.count === 1}
               onClick={this.counterDecrement}
-              className="btn btn-light p-4 mr-5"
             >-</button>
 
             <span className="col-4 mr-5">
@@ -103,29 +97,22 @@ class Content extends Component {
             </span>
 
             <button
-              disabled={this.state.count === 5}
-              onClick={this.counterIncrement}            
               className="btn btn-light p-4 mr-2"
+              disabled={this.state.count === 5}
+              onClick={this.counterIncrement}
             >+</button>
-
           </div>
-
         </div>
-        <div className="row"  >
+        <div className="row">
           <b className="col-6  text-light text-center p-lg-5" style={secondStyle}>
             <h1>
-              <span className="">
-                {this.state.seconds}
-              </span> <b></b>
+              {this.state.seconds} <b></b>
               {this.state.seconds === 1 ? "Second" : "Seconds"}
             </h1>
           </b>
         </div>
         <div style={style}></div>
-        
-
       </div>
-
     );
   }
 }
