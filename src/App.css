@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.App-header {
+  margin: auto 30px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  
+}
+.counter{
+  margin: auto 30px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.minute{
+  margin-left: 50px;
+  margin-right: 50px;
+}
